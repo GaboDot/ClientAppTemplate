@@ -1,0 +1,10 @@
+:root {
+    --main-bg-color: #2E404F;
+    --main-text-color: #F5F5F5;
+    --accent-bg: #47637A;
+    --accent-text-color: #5F5F5F;
+    --basic-shadow: 5px 5px 5px 0px rgb(0, 0, 0, 0.65);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: var(--main-bg-color); }
