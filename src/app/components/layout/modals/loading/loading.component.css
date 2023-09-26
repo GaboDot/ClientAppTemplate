@@ -1,0 +1,65 @@
+
+mat-dialog-content {
+    width: 100px;
+    height: 100px;
+    max-height: 125px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo_container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  overflow: hidden;
+  width: 82px;
+  height: 74px;
+  /* margin: 0 auto; */
+  background: #eee;
+  transform: scale(1);
+}
+
+.logo__icon {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 1;
+  width: 150px;
+  height: 75px;
+  fill: #fff;
+}
+
+.logo__fill1 {
+  width: 96px;
+  height: 20px;
+  background: #000;
+  -webkit-animation: fillUp 1.75s ease-in-out infinite;
+          animation: fillUp 1.75s ease-in-out infinite;
+}
+
+.logo__fill2 {
+  width: 96px;
+  height: 33px;
+  background: #e31d1a;
+  -webkit-animation: fillUp 1.75s ease-in-out infinite;
+          animation: fillUp 1.75s ease-in-out infinite;
+}
+
+@-webkit-keyframes fillUp {
+  0% {
+    transform: translate(0, 75px);
+  }
+  100% {
+    transform: translate(0, -75px);
+  }
+}
+
+@keyframes fillUp {
+  0% {
+    transform: translate(0, 75px);
+  }
+  100% {
+    transform: translate(0, -75px);
+  }
+}
