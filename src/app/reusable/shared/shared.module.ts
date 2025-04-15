@@ -106,6 +106,7 @@ import { UtilityService } from './utility.service';
     },
   ]
 })
+
 export class SharedModule {
   constructor(
     private registerIcon: MatIconRegistry,

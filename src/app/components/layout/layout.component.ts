@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Menu } from 'src/app/interfaces/menu';
+import { SessionService } from 'src/app/reusable/shared/session.service';
 // import { MenuService } from 'src/app/services/menu.service';
-import { UtilityService } from 'src/app/reusable/shared/utility.service';
 
 @Component({
   selector: 'app-layout',
@@ -19,11 +19,11 @@ export class LayoutComponent implements OnInit{
   constructor(
     private router: Router,
     // private _menuService: MenuService,
-    private _utilityService: UtilityService
+    private _sessionService: SessionService
   ) {}
 
   ngOnInit(): void {
-    const usuario = this._utilityService.obtenerSesionUsuario();
+    const usuario = this._sessionService.obtenerSesionUsuario();
     if(usuario != null) {
       this.email = usuario.email;
       this.nombre = usuario.nombre + ' ' + usuario.apellidoPaterno;
@@ -39,13 +39,13 @@ export class LayoutComponent implements OnInit{
     //   });
     }
     else {
-      this._utilityService.eliminarSesion();
+      this._sessionService.eliminarSesion();
       this.router.navigate(['login']);
     }
   }
 
   cerrarSesion() {
-    this._utilityService.eliminarSesion();
+    this._sessionService.eliminarSesion();
     this.router.navigate(['login']);
   }
 
